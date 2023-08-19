@@ -25,6 +25,7 @@ export default {
 	methods: {
 		addProduct() {
 			this.product.id = Date.now();
+			this.product.purchased = false;
 			this.$emit('create', this.product)
 			this.product = {
 				name: '',
